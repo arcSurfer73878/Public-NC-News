@@ -1,0 +1,91 @@
+.App {
+  height: 100vh;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 2fr 1fr 8fr 1fr;
+  grid-template-areas: "header header" "nav nav" "sidebar main" "footer footer";
+}
+
+search {
+  border: 2px solid black;
+  grid-area: search;
+}
+.home {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+header {
+  border: 2px solid rgba(255, 0, 0, 1);
+  background: white;
+  grid-area: header;
+}
+
+main {
+  border: 2px solid black;
+  background: lightblue;
+  grid-area: main;
+}
+
+nav {
+  border: 2px solid rgba(255, 0, 0, 1);
+  background: white;
+  grid-area: nav;
+}
+
+section {
+  border: 2px solid rgba(255, 0, 0, 1);
+  background: white;
+  grid-area: sidebar;
+}
+
+footer {
+  border: 2px solid rgba(255, 0, 0, 1);
+  background: white;
+  grid-area: footer;
+}
+#third {
+  border: none;
+  border-radius: 0;
+  padding: 10px;
+  float: left;
+  width: 72%;
+  font-size: 16px;
+}
+.btn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+.btn-group button {
+  background: #d9d9d9;
+  border: 1px solid black;
+  color: #555;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  display: block;
+}
+
+.btn-group button:not(:last-child) {
+  border-bottom: none;
+}
+.articles {
+  background-color: white;
+  padding: 12px 8px 12px 40px;
+}
+.articles:nth-child(odd) {
+  background: #eee;
+}
+.articles:hover {
+  background: #ddd;
+}
+/* .navigation{} */
