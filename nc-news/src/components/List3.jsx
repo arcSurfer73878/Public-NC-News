@@ -1,13 +1,23 @@
 import React from "react";
 import Votes from "./Votes";
 import { Link } from "@reach/router";
-// import Article from "./Article";
 
-function List({ articles, articleFilter }) {
-  // console.log(articleFilter);
+function List3({ articles, articleFilter }) {
+  function compare(a, b) {
+    const voteA = a.votes;
+    const voteB = b.votes;
+    let comparison = 0;
+    if (voteA > voteB) {
+      comparison = -1;
+    } else if (voteA < voteB) {
+      comparison = 1;
+    }
+    return comparison;
+  }
+  const result = articles.sort(compare);
   return (
     <ul>
-      {articles.reduce((acc, article) => {
+      {result.reduce((acc, article) => {
         if (
           !articleFilter ||
           article.title.toLowerCase().includes(articleFilter.toLowerCase()) ||
@@ -36,4 +46,4 @@ function List({ articles, articleFilter }) {
   );
 }
 
-export default List;
+export default List3;

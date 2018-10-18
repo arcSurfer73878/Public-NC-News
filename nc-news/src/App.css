@@ -6,8 +6,10 @@
   grid-template-rows: 2fr 1fr 8fr 1fr;
   grid-template-areas: "header header" "nav nav" "sidebar main" "footer footer";
 }
-
-search {
+* {
+  box-sizing: border-box;
+}
+.look {
   border: 2px solid black;
   grid-area: search;
 }
@@ -17,11 +19,11 @@ search {
   justify-content: center;
 }
 header {
-  border: 2px solid rgba(255, 0, 0, 1);
+  padding: 30px;
+  text-align: center;
   background: white;
   grid-area: header;
 }
-
 main {
   border: 2px solid black;
   background: lightblue;
@@ -29,13 +31,13 @@ main {
 }
 
 nav {
-  border: 2px solid rgba(255, 0, 0, 1);
+  border: 2px solid black;
   background: white;
   grid-area: nav;
 }
 
 section {
-  border: 2px solid rgba(255, 0, 0, 1);
+  border: 2px solid black;
   background: white;
   grid-area: sidebar;
 }
@@ -45,16 +47,17 @@ footer {
   background: white;
   grid-area: footer;
 }
-#third {
+#find {
   border: none;
   border-radius: 0;
   padding: 10px;
   float: left;
   width: 72%;
   font-size: 16px;
+  background-color: #eee;
 }
 .btn {
-  padding: 10px;
+  padding: 9px;
   width: 25%;
   background: #d9d9d9;
   color: #555;
@@ -88,4 +91,56 @@ footer {
 .articles:hover {
   background: #ddd;
 }
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+#comment_form input,
+#comment_form textarea {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  padding: 8px 10px;
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+
+  outline: 0;
+}
+
+#comment_form textarea {
+  width: 350px;
+}
+
+#comment_form input[type="submit"] {
+  cursor: pointer;
+  background: -webkit-linear-gradient(top, #efefef, #ddd);
+  background: -moz-linear-gradient(top, #efefef, #ddd);
+  background: -ms-linear-gradient(top, #efefef, #ddd);
+  background: -o-linear-gradient(top, #efefef, #ddd);
+  background: linear-gradient(top, #efefef, #ddd);
+  color: #333;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 1);
+  border: 1px solid #ccc;
+}
+
+#comment_form input[type="submit"]:hover {
+  background: -webkit-linear-gradient(top, #eee, #ccc);
+  background: -moz-linear-gradient(top, #eee, #ccc);
+  background: -ms-linear-gradient(top, #eee, #ccc);
+  background: -o-linear-gradient(top, #eee, #ccc);
+  background: linear-gradient(top, #eee, #ccc);
+  border: 1px solid #bbb;
+}
+
+#comment_form input[type="submit"]:active {
+  background: -webkit-linear-gradient(top, #ddd, #aaa);
+  background: -moz-linear-gradient(top, #ddd, #aaa);
+  background: -ms-linear-gradient(top, #ddd, #aaa);
+  background: -o-linear-gradient(top, #ddd, #aaa);
+  background: linear-gradient(top, #ddd, #aaa);
+  border: 1px solid #999;
+}
+
 /* .navigation{} */

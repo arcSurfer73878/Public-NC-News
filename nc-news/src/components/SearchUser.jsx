@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-class Search extends React.Component {
+class SearchUser extends React.Component {
   state = {
     keyword: ""
   };
@@ -10,7 +10,7 @@ class Search extends React.Component {
         <input
           id="find"
           type="text"
-          placeholder="Search for Article..."
+          placeholder="Search for User..."
           onChange={this.handleChange}
           value={this.state.keyword}
         />
@@ -27,11 +27,11 @@ class Search extends React.Component {
     });
   };
   handleClick = () => {
-    this.props.articleSearch(this.state.keyword);
+    this.props.UserSearch(this.state.keyword);
     this.setState({
       keyword: ""
     });
   };
 }
 
-export default Search;
+export default SearchUser;

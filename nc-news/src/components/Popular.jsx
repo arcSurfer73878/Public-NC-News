@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import "../App.css";
 import * as api from "../api";
-import List from "./List";
+import List3 from "./List3";
 import Search from "./Search";
-class Articles extends Component {
+class Popular extends Component {
   state = {
     articles: [],
+    err: null,
     articleFilter: null
   };
   render() {
@@ -15,9 +16,9 @@ class Articles extends Component {
           <Search articleSearch={this.articleSearch} />
         </div>
         <div>
-          <p>Latest Articles</p>
+          <p>Popular</p>
           <div>
-            <List
+            <List3
               articles={this.state.articles}
               articleFilter={this.state.articleFilter}
             />
@@ -38,7 +39,7 @@ class Articles extends Component {
     }
   }
   fetchArticles = () => {
-    api.getArticles(this.props.topic).then(articles =>
+    api.getArticles(this.props.topics).then(articles =>
       this.setState({
         articles
       })
@@ -47,4 +48,4 @@ class Articles extends Component {
   // singleArticle = () => {};
 }
 
-export default Articles;
+export default Popular;

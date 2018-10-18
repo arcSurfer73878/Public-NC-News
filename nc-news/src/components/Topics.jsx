@@ -10,9 +10,9 @@ class Topics extends Component {
   render() {
     return (
       <div>
-        <search>
+        <div className="search">
           <Search articleSearch={this.articleSearch} />
-        </search>
+        </div>
         <div>
           <p>Topics</p>
           <div>
