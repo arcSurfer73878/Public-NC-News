@@ -16,7 +16,7 @@ function List2({ articles, articleFilter }) {
   }
   const result = articles.sort(compare);
   return (
-    <ul>
+    <div>
       {result.reduce((acc, article) => {
         if (
           !articleFilter ||
@@ -24,25 +24,26 @@ function List2({ articles, articleFilter }) {
           article.body.includes(articleFilter)
         ) {
           acc.push(
-            <div key={article._id}>
-              <Link to={`/${article._id}`}>
-                <h2>{article.title}</h2>
-                <p
-                  // onClick={this.singleArticle}
-                  className="articles"
-                >
-                  {article.body}
-                </p>
+            <div key={article._id} className="card">
+              <Link style={{ textDecoration: "none" }} to={`/${article._id}`}>
+                <div className="titre">
+                  <h2>{article.title}</h2>
+                </div>
+                <div className="content">
+                  <p>{article.body}</p>
+                </div>
               </Link>
-              <p>by {article.created_by.name}</p>
-              <p>Comment: {article.comment_count}</p>
+              <div className="author">
+                <p>by {article.created_by.name}</p>
+              </div>
+              <h4>Comment: {article.comment_count}</h4>
               <Votes article={article} />
             </div>
           );
         }
         return acc;
       }, [])}
-    </ul>
+    </div>
   );
 }
 

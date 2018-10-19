@@ -22,7 +22,9 @@ class CommentPoster extends Component {
               onChange={this.handleChange}
             />
             <br />
-            <button>Post</button>
+            <div className="username">
+              <button>Post</button>
+            </div>
           </form>
         )}
       </div>

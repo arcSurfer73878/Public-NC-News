@@ -10,32 +10,33 @@ class Topics extends Component {
   };
   render() {
     return (
-      <div>
+      <ul>
         <div className="search">
           <SearchUser UserSearch={this.UserSearch} />
         </div>
-        <div>
-          <p>Users</p>
-          <div>
-            {this.state.users.reduce((acc, user) => {
-              if (
-                !this.state.userFilter ||
-                user.name
-                  .toLowerCase()
-                  .includes(this.state.userFilter.toLowerCase()) ||
-                user.username.includes(this.state.userFilter)
-              ) {
-                acc.push(
-                  <div key={user._id}>
-                    <h2>{user.username}</h2>
-                  </div>
-                );
-              }
-              return acc;
-            }, [])}
-          </div>
+        <br />
+        <div className="title">
+          <h2>Users</h2>
         </div>
-      </div>
+        <div className="row">
+          {this.state.users.reduce((acc, user) => {
+            if (
+              !this.state.userFilter ||
+              user.name
+                .toLowerCase()
+                .includes(this.state.userFilter.toLowerCase()) ||
+              user.username.includes(this.state.userFilter)
+            ) {
+              acc.push(
+                <div key={user._id} className="titre">
+                  <h2>{user.username}</h2>
+                </div>
+              );
+            }
+            return acc;
+          }, [])}
+        </div>
+      </ul>
     );
   }
   UserSearch = keyword => {

@@ -11,20 +11,21 @@ class Popular extends Component {
   };
   render() {
     return (
-      <div>
+      <ul>
         <div className="search">
           <Search articleSearch={this.articleSearch} />
         </div>
-        <div>
-          <p>Popular</p>
-          <div>
-            <List3
-              articles={this.state.articles}
-              articleFilter={this.state.articleFilter}
-            />
-          </div>
+        <br />
+        <div className="title">
+          <h2>Most Popular Articles</h2>
         </div>
-      </div>
+        <div className="row">
+          <List3
+            articles={this.state.articles}
+            articleFilter={this.state.articleFilter}
+          />
+        </div>
+      </ul>
     );
   }
   articleSearch = keyword => {

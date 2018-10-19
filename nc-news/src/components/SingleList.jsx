@@ -4,23 +4,25 @@ import Votes from "./Votes";
 
 function SingleList({ article }) {
   return (
-    <ul>
-      <div>
-        <h2>{article.title}</h2>
-        <p className="article" key={article._id}>
-          {article.body}
-        </p>
-        <div>
+    <div>
+      <div key={article._id} className="card">
+        <div className="titre">
+          <h2>{article.title}</h2>
+        </div>
+        <div className="content" key={article._id}>
+          <p>{article.body}</p>
+        </div>
+        <div className="author">
           {article.created_by ? (
             <p>by {article.created_by.name}</p>
           ) : (
             <p>unknown</p>
           )}
         </div>
-        <p>Comment: {article.comment_count}</p>
+        <h4>Comment: {article.comment_count}</h4>
         <Votes article={article} />
       </div>
-    </ul>
+    </div>
   );
 }
 

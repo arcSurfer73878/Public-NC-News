@@ -5,22 +5,30 @@ import Search from "./Search";
 class About extends Component {
   render() {
     return (
-      <div>
+      <ul>
         <div className="search">
           <Search articleSearch={this.articleSearch} />
         </div>
-        <div>
-          <p>About</p>
-          <div>
-            <p>
-              fbwhjefbwkfjcdwj jknfwln ljnfwjwjn dnjdncjwdndwncjldd c<br />
-              bw bwhb hwdb hwdb hdjkwdkjwk fwwuewpnkjkldwfmkw
-              <br />
-              dwiownw dhdh eiowpqwqoeirn vnjnfvmdwm{" "}
-            </p>
+        <br />
+        <div className="title">
+          <h2>About</h2>
+        </div>
+        <div className="row">
+          <div className="card">
+            <div className="titre">
+              <h2>What is this all about?</h2>
+            </div>
+            <div className="content">
+              <p>
+                fbwhjefbwkfjcdwj jknfwln ljnfwjwjn dnjdncjwdndwncjldd c<br />
+                bw bwhb hwdb hwdb hdjkwdkjwk fwwuewpnkjkldwfmkw
+                <br />
+                dwiownw dhdh eiowpqwqoeirn vnjnfvmdwm{" "}
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      </ul>
     );
   }
 }

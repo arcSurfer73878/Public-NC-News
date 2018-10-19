@@ -10,18 +10,21 @@ class Article extends Component {
   state = { article: {} };
   render() {
     return (
-      <div>
+      <ul>
         <div className="search">
           <Search articleSearch={this.articleSearch} />
         </div>
-        <div>
-          <p>Article</p>
-          <div>
-            <SingleList article={this.state.article} />
-          </div>
+        <br />
+        <div className="title">
+          <h2>Article</h2>
+        </div>
+        <div className="row">
+          <SingleList article={this.state.article} />
+        </div>
+        <div className="comment">
           <Comment id={this.props.id} user={this.props.user} />
         </div>
-      </div>
+      </ul>
     );
   }
   componentDidMount() {

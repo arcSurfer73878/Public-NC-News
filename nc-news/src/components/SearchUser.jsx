@@ -8,7 +8,7 @@ class SearchUser extends React.Component {
     return (
       <span className="look">
         <input
-          id="find"
+          className="find"
           type="text"
           placeholder="Search for User..."
           onChange={this.handleChange}

@@ -11,20 +11,21 @@ class MostComments extends Component {
   };
   render() {
     return (
-      <div>
+      <ul>
         <div className="search">
           <Search articleSearch={this.articleSearch} />
         </div>
-        <div>
-          <p>Most Commented</p>
-          <div>
-            <List2
-              articles={this.state.articles}
-              articleFilter={this.state.articleFilter}
-            />
-          </div>
+        <br />
+        <div className="title">
+          <h2>Most Commented</h2>
         </div>
-      </div>
+        <div className="row">
+          <List2
+            articles={this.state.articles}
+            articleFilter={this.state.articleFilter}
+          />
+        </div>
+      </ul>
     );
   }
   articleSearch = keyword => {
