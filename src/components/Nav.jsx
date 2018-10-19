@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "@reach/router";
-import Articles from "./Articles";
+// import Articles from "./Articles";
 // import Topics from "./Topics";
 import * as api from "../api";
-import About from "./About";
 
 class Nav extends Component {
   state = {
@@ -17,18 +16,18 @@ class Nav extends Component {
           <span>Loading...</span>
         ) : (
           <div>
-            <Link onClick={Articles} to="/">
-              <na> Home </na>
+            <Link to="/">
+              <span> Home </span>
             </Link>
             {topics.map(topic => {
               return (
                 <Link key={topic._id} to={`/topics/${topic.slug}`}>
-                  <na> {topic.title} </na>
+                  <span> {topic.title} </span>
                 </Link>
               );
             })}
-            <Link onClick={About} to="/about">
-              <na> About the website </na>
+            <Link to="/about">
+              <span> About the website </span>
             </Link>
           </div>
         )}
