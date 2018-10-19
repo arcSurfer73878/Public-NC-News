@@ -37,7 +37,7 @@ express
 cypress  // for testing
 ```
 
-Make sure you've navigated into the folder and install all dependencies using:
+Make sure you've installed all dependencies using:
 
 ```
 npm install
