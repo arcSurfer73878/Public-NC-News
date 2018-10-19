@@ -11,10 +11,15 @@ class Comment extends Component {
     return (
       <div>
         <CommentPoster addComment={this.addComment} />
-        <ListComment
-          comments={this.state.comments}
-          deleteComment={this.deleteComment}
-        />
+        <h2>Comments:</h2>
+        <ul>
+          <div className="row">
+            <ListComment
+              comments={this.state.comments}
+              deleteComment={this.deleteComment}
+            />
+          </div>
+        </ul>
       </div>
     );
   }

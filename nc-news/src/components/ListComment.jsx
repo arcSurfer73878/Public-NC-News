@@ -3,23 +3,30 @@ import React from "react";
 
 function ListComment({ comments, deleteComment }) {
   return (
-    <ul>
+    <div>
       {comments.map(comment => {
         return (
-          <div key={comment._id}>
+          <div key={comment._id} className="card">
             {comment.created_by ? (
-              <h2>{comment.created_by.username}</h2>
+              <div className="titre">
+                <h2>{comment.created_by.username}</h2>
+              </div>
             ) : (
               <h2>unknown</h2>
             )}
-            <p className="comments">{comment.body}</p>
-            <button onClick={() => deleteComment(comment._id, comment)}>
+            <div className="content">
+              <p>{comment.body}</p>
+            </div>
+            <button
+              className="bouton"
+              onClick={() => deleteComment(comment._id, comment)}
+            >
               Delete
             </button>
           </div>
         );
       })}
-    </ul>
+    </div>
   );
 }
 
