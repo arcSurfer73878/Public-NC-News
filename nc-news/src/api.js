@@ -49,10 +49,21 @@ export const getArticle = id => {
     .get(`${API_URL}/articles/${id}`)
     .then(({ data }) => data.article);
 };
+// export const deleteArticle = async (id, article) => {
+//   console.log(article);
+//   return axios
+//     .delete(`${API_URL}/articles/${id}`, { article })
+//     .then(({ data }) => data.article);
+// };
 export const vote = (id, direction) => {
   return axios
     .patch(`${API_URL}/articles/${id}?vote=${direction}`)
     .then(({ data }) => data.article);
+};
+export const voteComment = (id, direction) => {
+  return axios
+    .patch(`${API_URL}/comments/${id}?vote=${direction}`)
+    .then(({ data }) => data.comment);
 };
 export const getUser = async username => {
   return axios

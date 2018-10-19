@@ -1,4 +1,5 @@
 import React from "react";
+import CommentVotes from "./CommentVotes";
 // import Article from "./Article";
 
 function ListComment({ comments, deleteComment }) {
@@ -17,12 +18,9 @@ function ListComment({ comments, deleteComment }) {
             <div className="content">
               <p>{comment.body}</p>
             </div>
-            <button
-              className="bouton"
-              onClick={() => deleteComment(comment._id, comment)}
-            >
-              Delete
-            </button>
+            <div>
+              <CommentVotes comment={comment} deleteComment={deleteComment} />
+            </div>
           </div>
         );
       })}

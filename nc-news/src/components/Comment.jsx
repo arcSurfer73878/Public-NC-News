@@ -41,7 +41,6 @@ class Comment extends Component {
     });
   };
   deleteComment = (id, comment) => {
-    console.log(comment);
     api.deleteComment(id, comment).then(() => {
       // console.log(comments);
       this.setState(state => ({

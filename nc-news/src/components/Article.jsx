@@ -7,23 +7,32 @@ import SingleList from "./SingleList";
 import { navigate } from "@reach/router";
 
 class Article extends Component {
-  state = { article: {} };
+  state = { article: {}, delete: false };
   render() {
     return (
       <ul>
-        <div className="search">
-          <Search articleSearch={this.articleSearch} />
-        </div>
-        <br />
-        <div className="title">
-          <h2>Article</h2>
-        </div>
-        <div className="row">
-          <SingleList article={this.state.article} />
-        </div>
-        <div className="comment">
-          <Comment id={this.props.id} user={this.props.user} />
-        </div>
+        {this.state.delete ? (
+          <h2>Article Deleted</h2>
+        ) : (
+          <div>
+            <div className="search">
+              <Search articleSearch={this.articleSearch} />
+            </div>
+            <br />
+            <div className="title">
+              <h2>Article</h2>
+            </div>
+            <div className="row">
+              <SingleList
+                article={this.state.article}
+                // deleteArticle={this.deleteArticle}
+              />
+            </div>
+            <div className="comment">
+              <Comment id={this.props.id} user={this.props.user} />
+            </div>
+          </div>
+        )}
       </ul>
     );
   }
@@ -37,6 +46,14 @@ class Article extends Component {
         navigate("/error", { replace: true, state: { err: err.message } });
       });
   }
+  // deleteArticle = (id, article) => {
+  //   console.log(article);
+  //   api.deleteArticle(id, article).then(() => {
+  //     this.setState({
+  //       delete: true
+  //     });
+  //   });
+  // };
 }
 
 export default Article;

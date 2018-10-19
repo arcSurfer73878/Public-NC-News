@@ -2,7 +2,7 @@ import React from "react";
 import Votes from "./Votes";
 // import Article from "./Article";
 
-function SingleList({ article }) {
+function SingleList({ article, deleteArticle }) {
   return (
     <div>
       <div key={article._id} className="card">
@@ -20,7 +20,10 @@ function SingleList({ article }) {
           )}
         </div>
         <h4>Comment: {article.comment_count}</h4>
-        <Votes article={article} />
+        <Votes
+          article={article}
+          // deleteArticle={deleteArticle}
+        />
       </div>
     </div>
   );
