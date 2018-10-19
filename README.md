@@ -17,7 +17,6 @@ $ git clone https://github.com/arcSurfer73878/FE2-NC-News.git
 1. Download or verify if you have the Prerequisites.
 2. Install the Node Modules.
 
-$ cd nc-news
 $ npm start
 ```
 
@@ -49,10 +48,11 @@ npm install
 - [Visual Code Studio](https://code.visualstudio.com/)
 - [React](https://reactjs.org/)
 - [Heroku](https://dashboard.heroku.com)
+- [Netlify](https://www.netlify.com/)
 
 ### Deployment
 
-Coming Soon....
+- [Live App](https://nc-news-kaiming.netlify.com)
 
 ### Author
 
