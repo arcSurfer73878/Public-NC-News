@@ -1,15 +1,10 @@
 import React, { Component } from "react";
 import "../App.css";
-import Search from "./Search";
 
 class About extends Component {
   render() {
     return (
       <ul>
-        <div className="search">
-          <Search articleSearch={this.articleSearch} />
-        </div>
-        <br />
         <div className="title">
           <h2>About</h2>
         </div>
