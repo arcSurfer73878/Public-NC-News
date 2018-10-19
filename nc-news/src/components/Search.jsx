@@ -8,7 +8,7 @@ class Search extends React.Component {
     return (
       <span className="look">
         <input
-          id="find"
+          className="find"
           type="text"
           placeholder="Search for Article..."
           onChange={this.handleChange}

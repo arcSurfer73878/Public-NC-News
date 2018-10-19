@@ -22,7 +22,7 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          <h1>NC NEWS</h1>
+          <h1>Northcoders News</h1>
         </header>
         <nav>
           <Nav />
@@ -30,21 +30,25 @@ class App extends Component {
         <section>
           <SideBar login={this.login} />
         </section>
-        <Router className="main">
-          <Articles path="/" />
-          <Articles path="/topics/:topic" />
-          <ArticlePoster path="/ArticlePoster" user={this.state.user} />
-          <MostComments path="/mostcomments" />
-          <NotFound path="/error" />
-          <NotFound default />
-          <Popular path="/popular" />
-          <Topics path="/topics" />
-          <About path="/about" />
-          <Users path="/users" />
-          <Article path="/:id" user={this.state.user} />
-        </Router>
+        <main>
+          <Router>
+            <Articles path="/" />
+            <Articles path="/topics/:topic" />
+            <ArticlePoster path="/ArticlePoster" user={this.state.user} />
+            <MostComments path="/mostcomments" />
+            <NotFound path="/error" />
+            <NotFound default />
+            <Popular path="/popular" />
+            <Topics path="/topics" />
+            <About path="/about" />
+            <Users path="/users" />
+            <Article path="/:id" user={this.state.user} />
+          </Router>
+        </main>
+
         <footer>
-          <p>Powered by React</p>
+          <p>Powered by React </p>
+          <p> A Northcoders Project by Kaiming Shen </p>
         </footer>
       </div>
     );

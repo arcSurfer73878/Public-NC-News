@@ -7,14 +7,16 @@ class Votes extends Component {
   render() {
     return (
       <div>
-        <p>Likes: {this.props.article.votes + this.state.voteMod}</p>
+        <h4>Likes: {this.props.article.votes + this.state.voteMod}</h4>
         <button
+          className="bouton"
           onClick={() => this.showLove(this.props.article._id, "up")}
           disabled={this.state.voteMod === 1}
         >
-          UP
+          Up
         </button>
         <button
+          className="bouton"
           onClick={() => this.showLove(this.props.article._id, "down")}
           disabled={this.state.voteMod === -1}
         >

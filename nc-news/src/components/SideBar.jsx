@@ -11,39 +11,46 @@ class SideBar extends React.Component {
   render() {
     return (
       <div>
-        <div>
+        <div className="login">
           {this.state.login ? (
             <h2>You are logged</h2>
           ) : (
             <form onSubmit={this.handleSubmit}>
-              <label htmlFor="username">Username:</label>
-              <input
-                placeholder="E.g.: jessjelly"
-                type="text"
-                id="username"
-                name="username"
-                onChange={this.handleChange}
-                value={this.state.username}
-              />
-              <button>Login</button>
+              <div className="username">
+                <select
+                  value={this.state.username}
+                  onChange={this.handleChange}
+                >
+                  <option>Select a username</option>
+                  <option value="tickle122">tickle122</option>
+                  <option value="grumpy19">grumpy19</option>
+                  <option value="happyamy2016">happyamy2016</option>
+                  <option value="cooljmessy">cooljmessy</option>
+                  <option value="weegembump">weegembump</option>
+                  <option value="jessjelly">jessjelly</option>
+                </select>
+                <div>
+                  <button>Login</button>
+                </div>
+              </div>
             </form>
           )}
         </div>
         <span className="btn-group">
-          <Link to="/ArticlePoster">
-            <button>Add an article</button>
+          <Link style={{ textDecoration: "none" }} to="/ArticlePoster">
+            <button>Add An Article</button>
           </Link>
           {/* <Link to="/">
             <button onClick={Articles}>All</button>
           </Link> */}
-          <Link to="/popular">
-            <button>Popular</button>
+          <Link style={{ textDecoration: "none" }} to="/popular">
+            <button>Most Popular Articles</button>
           </Link>
-          <Link to="/mostcomments">
-            <button>Most Commented</button>
+          <Link style={{ textDecoration: "none" }} to="/mostcomments">
+            <button>Most Commented Articles</button>
           </Link>
-          <Link to="/users">
-            <button>Users</button>
+          <Link style={{ textDecoration: "none" }} to="/users">
+            <button>All Users</button>
           </Link>
         </span>
       </div>

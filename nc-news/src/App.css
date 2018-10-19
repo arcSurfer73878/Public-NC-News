@@ -1,21 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
   height: 100vh;
-  text-align: center;
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 2fr 1fr 8fr 1fr;
   grid-template-areas: "header header" "nav nav" "sidebar main" "footer footer";
 }
-* {
-  box-sizing: border-box;
-}
-.look {
-  border: 2px solid black;
-  grid-area: search;
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
 }
 .home {
   display: flex;
-  flex-direction: row;
   justify-content: center;
 }
 header {
@@ -24,37 +24,147 @@ header {
   background: white;
   grid-area: header;
 }
+header h1 {
+  font-size: 50px;
+}
+
 main {
-  border: 2px solid black;
-  background: lightblue;
   grid-area: main;
 }
 
 nav {
-  border: 2px solid black;
-  background: white;
+  background-color: #333;
   grid-area: nav;
 }
+nav na {
+  float: left;
+  flex-direction: row;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
+nav na:hover {
+  background-color: #ddd;
+  color: black;
+}
+.search {
+  padding-bottom: 20px;
+}
+.title {
+  grid-area: main;
+  background-color: white;
+  border: solid #333;
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+  margin-top: 20px;
+}
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.box {
+  background-color: white;
+  padding: 10px 10px 10px 10px;
+  margin-top: 20px;
+  text-decoration: none;
+}
+.titre h2 {
+  font-family: "Comic Sans MS";
+  color: black;
+}
+.content {
+  background-color: #f1f1f1;
+  width: 100%;
+  padding: 10px;
+}
+.content:hover {
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+}
+.content p {
+  color: black;
+  font-size: 20px;
+  font-family: "Comic Sans MS";
+}
+.author {
+  float: right;
+}
+.author p {
+  font-family: "Comic Sans MS";
+}
+.bouton {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.bouton:hover {
+  background-color: white;
+  color: black;
+}
 section {
-  border: 2px solid black;
-  background: white;
   grid-area: sidebar;
 }
-
-footer {
-  border: 2px solid rgba(255, 0, 0, 1);
-  background: white;
-  grid-area: footer;
+.login {
+  background-color: white;
+  padding: 10px 10px 10px 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: solid #333;
 }
-#find {
+.username select {
+  background-color: #ddd;
+  color: #333;
+  padding: 8px 16px;
   border: none;
-  border-radius: 0;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  margin: 4px 2px;
+}
+.username button {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.find {
+  border: none;
   padding: 10px;
   float: left;
-  width: 72%;
+  width: 75%;
   font-size: 16px;
-  background-color: #eee;
+  background-color: white;
 }
 .btn {
   padding: 9px;
@@ -69,32 +179,27 @@ footer {
   border-radius: 0;
 }
 .btn-group button {
-  background: #d9d9d9;
-  border: 1px solid black;
-  color: #555;
+  background: rgb(80, 80, 80);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  font-size: 16px;
+  font-family: "Comic Sans MS";
+}
+
+.btn-group button:hover {
+  background-color: #ddd;
+  color: black;
   padding: 10px;
   cursor: pointer;
   width: 100%;
   display: block;
 }
 
-.btn-group button:not(:last-child) {
+.btn-group button {
   border-bottom: none;
-}
-.articles {
-  background-color: white;
-  padding: 12px 8px 12px 40px;
-}
-.articles:nth-child(odd) {
-  background: #eee;
-}
-.articles:hover {
-  background: #ddd;
-}
-body {
-  font-family: Arial;
-  padding: 10px;
-  background: #f1f1f1;
 }
 
 #comment_form input,
@@ -141,6 +246,13 @@ body {
   background: -o-linear-gradient(top, #ddd, #aaa);
   background: linear-gradient(top, #ddd, #aaa);
   border: 1px solid #999;
+}
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+  grid-area: footer;
 }
 
 /* .navigation{} */

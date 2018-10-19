@@ -16,25 +16,22 @@ class Nav extends Component {
         {!topics.length ? (
           <span>Loading...</span>
         ) : (
-          <>
+          <div>
             <Link onClick={Articles} to="/">
-              <h2> Home </h2>
+              <na> Home </na>
             </Link>
             {topics.map(topic => {
               return (
                 <Link key={topic._id} to={`/topics/${topic.slug}`}>
-                  <h2> {topic.title} </h2>
+                  <na> {topic.title} </na>
                 </Link>
               );
             })}
             <Link onClick={About} to="/about">
-              <h2> About the website </h2>
+              <na> About the website </na>
             </Link>
-          </>
+          </div>
         )}
-        {/* <Link onClick={Topics} to="/topics">
-          <h2>Topics</h2>
-        </Link> */}
       </div>
     );
   }

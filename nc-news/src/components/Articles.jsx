@@ -10,20 +10,21 @@ class Articles extends Component {
   };
   render() {
     return (
-      <div>
+      <ul>
         <div className="search">
           <Search articleSearch={this.articleSearch} />
         </div>
-        <div>
-          <p>Latest Articles</p>
-          <div>
-            <List
-              articles={this.state.articles}
-              articleFilter={this.state.articleFilter}
-            />
-          </div>
+        <br />
+        <div className="title">
+          <h2>Latest Articles</h2>
         </div>
-      </div>
+        <div className="row">
+          <List
+            articles={this.state.articles}
+            articleFilter={this.state.articleFilter}
+          />
+        </div>
+      </ul>
     );
   }
   articleSearch = keyword => {
