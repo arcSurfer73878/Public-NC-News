@@ -13,7 +13,7 @@ class SideBar extends React.Component {
       <div>
         <div className="login">
           {this.state.login ? (
-            <h2>You are logged</h2>
+            <h4>You are logged as {this.state.username}</h4>
           ) : (
             <form onSubmit={this.handleSubmit}>
               <div className="username">
