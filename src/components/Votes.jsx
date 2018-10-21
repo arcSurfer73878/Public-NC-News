@@ -22,14 +22,6 @@ class Votes extends Component {
         >
           Down
         </button>
-        {/* <button
-          className="bouton3"
-          onClick={() =>
-            this.props.deleteArticle(this.props.article._id, this.props.article)
-          }
-        >
-          Delete
-        </button> */}
       </div>
     );
   }

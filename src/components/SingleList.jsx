@@ -1,6 +1,5 @@
 import React from "react";
 import Votes from "./Votes";
-// import Article from "./Article";
 
 function SingleList({ article, deleteArticle }) {
   return (
@@ -20,10 +19,7 @@ function SingleList({ article, deleteArticle }) {
           )}
         </div>
         <h4>Comment: {article.comment_count}</h4>
-        <Votes
-          article={article}
-          // deleteArticle={deleteArticle}
-        />
+        <Votes article={article} />
       </div>
     </div>
   );

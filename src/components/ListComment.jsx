@@ -1,6 +1,5 @@
 import React from "react";
 import CommentVotes from "./CommentVotes";
-// import Article from "./Article";
 
 function ListComment({ comments, deleteComment }) {
   return (

@@ -38,7 +38,6 @@ class CommentPoster extends Component {
   };
   handleSubmit = event => {
     event.preventDefault();
-    // add comment
     this.props.addComment(this.state.body);
     this.setState({
       addedComment: true

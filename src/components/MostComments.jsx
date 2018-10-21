@@ -47,7 +47,6 @@ class MostComments extends Component {
       })
     );
   };
-  // singleArticle = () => {};
 }
 
 export default MostComments;

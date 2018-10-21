@@ -31,7 +31,6 @@ class Comment extends Component {
     );
   };
   addComment = body => {
-    // this.props.user.id
     console.log(body);
     api.postComment(this.props.id, body, this.props.user).then(comment => {
       console.log(comment);
@@ -42,7 +41,6 @@ class Comment extends Component {
   };
   deleteComment = (id, comment) => {
     api.deleteComment(id, comment).then(() => {
-      // console.log(comments);
       this.setState(state => ({
         comments: state.comments.filter(comment => comment._id !== id)
       }));

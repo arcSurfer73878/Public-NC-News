@@ -45,7 +45,6 @@ class Articles extends Component {
       })
     );
   };
-  // singleArticle = () => {};
 }
 
 export default Articles;

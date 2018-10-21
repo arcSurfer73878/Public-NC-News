@@ -1,10 +1,8 @@
 import React from "react";
 import Votes from "./Votes";
 import { Link } from "@reach/router";
-// import Article from "./Article";
 
 function List({ articles, articleFilter }) {
-  // console.log(articleFilter);
   return (
     <div>
       {articles.reduce((acc, article) => {

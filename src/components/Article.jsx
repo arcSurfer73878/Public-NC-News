@@ -23,10 +23,7 @@ class Article extends Component {
               <h2>Article</h2>
             </div>
             <div className="row">
-              <SingleList
-                article={this.state.article}
-                // deleteArticle={this.deleteArticle}
-              />
+              <SingleList article={this.state.article} />
             </div>
             <div className="comment">
               <Comment id={this.props.id} user={this.props.user} />
@@ -46,14 +43,6 @@ class Article extends Component {
         navigate("/error", { replace: true, state: { err: err.message } });
       });
   }
-  // deleteArticle = (id, article) => {
-  //   console.log(article);
-  //   api.deleteArticle(id, article).then(() => {
-  //     this.setState({
-  //       delete: true
-  //     });
-  //   });
-  // };
 }
 
 export default Article;

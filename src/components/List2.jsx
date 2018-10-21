@@ -14,7 +14,7 @@ function List2({ articles, articleFilter }) {
     }
     return comparison;
   }
-  const result = articles.sort(compare);
+  const result = [...articles].sort(compare);
   return (
     <div>
       {result.reduce((acc, article) => {

@@ -1,6 +1,5 @@
 import React from "react";
 import "../App.css";
-// import Articles from "./Articles";
 import { Link } from "@reach/router";
 
 class SideBar extends React.Component {
@@ -40,9 +39,6 @@ class SideBar extends React.Component {
           <Link style={{ textDecoration: "none" }} to="/ArticlePoster">
             <button>Add An Article</button>
           </Link>
-          {/* <Link to="/">
-            <button onClick={Articles}>All</button>
-          </Link> */}
           <Link style={{ textDecoration: "none" }} to="/popular">
             <button>Most Popular Articles</button>
           </Link>
@@ -62,20 +58,12 @@ class SideBar extends React.Component {
     this.setState({
       login: true
     });
-    // api request - is this a real user?
-    // if real - store user in App state
-    // hide login form
   };
   handleChange = event => {
     const value = event.target.value;
-    this.setState(
-      {
-        username: value
-      },
-      () => {
-        console.log(this.state);
-      }
-    );
+    this.setState({
+      username: value
+    });
   };
 }
 

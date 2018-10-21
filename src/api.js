@@ -27,10 +27,6 @@ export const postComment = async (id, body, created_by) => {
     .then(({ data }) => data.comment);
 };
 export const postArticle = async (title, belongs_to, body, user) => {
-  console.log(title);
-  console.log(belongs_to);
-  console.log(body);
-  console.log(user);
   return axios
     .post(`${API_URL}/topics/${belongs_to}/articles`, {
       title: title,
@@ -49,12 +45,6 @@ export const getArticle = id => {
     .get(`${API_URL}/articles/${id}`)
     .then(({ data }) => data.article);
 };
-// export const deleteArticle = async (id, article) => {
-//   console.log(article);
-//   return axios
-//     .delete(`${API_URL}/articles/${id}`, { article })
-//     .then(({ data }) => data.article);
-// };
 export const vote = (id, direction) => {
   return axios
     .patch(`${API_URL}/articles/${id}?vote=${direction}`)

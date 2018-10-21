@@ -90,7 +90,6 @@ class ArticlePoster extends Component {
     });
   };
   addArticle = (title, belongs_to, body, user) => {
-    // this.props.user.id
     api.postArticle(title, belongs_to, body, user);
   };
 }

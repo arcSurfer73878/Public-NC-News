@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "@reach/router";
-// import Articles from "./Articles";
-// import Topics from "./Topics";
 import * as api from "../api";
 
 class Nav extends Component {

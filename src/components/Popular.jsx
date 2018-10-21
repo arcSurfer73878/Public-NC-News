@@ -46,7 +46,6 @@ class Popular extends Component {
       })
     );
   };
-  // singleArticle = () => {};
 }
 
 export default Popular;

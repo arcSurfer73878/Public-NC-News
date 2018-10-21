@@ -32,9 +32,9 @@ You will need:
 Essential Node modules:
 
 ```
-express
 @reach router
-cypress  // for testing
+axios
+react
 ```
 
 Make sure you've installed all dependencies using:
