@@ -3,8 +3,7 @@ import "../App.css";
 import * as api from "../api";
 import { Link } from "@reach/router";
 import SearchUser from "./SearchUser";
-
-class Topics extends Component {
+class Users extends Component {
   state = {
     users: [],
     userFilter: null
@@ -60,5 +59,4 @@ class Topics extends Component {
     );
   };
 }
-
-export default Topics;
+export default Users;

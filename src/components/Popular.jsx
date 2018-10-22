@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import "../App.css";
 import * as api from "../api";
-import List3 from "./List3";
+import PopularList from "./PopularList";
 import Search from "./Search";
+
 class Popular extends Component {
   state = {
     articles: [],
@@ -20,7 +21,7 @@ class Popular extends Component {
           <h2>Most Popular Articles</h2>
         </div>
         <div className="row">
-          <List3
+          <PopularList
             articles={this.state.articles}
             articleFilter={this.state.articleFilter}
           />
@@ -47,5 +48,4 @@ class Popular extends Component {
     );
   };
 }
-
 export default Popular;

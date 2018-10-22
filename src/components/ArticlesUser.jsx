@@ -4,7 +4,6 @@ import * as api from "../api";
 import ListUser from "./ListUser";
 import Search from "./Search";
 import { navigate } from "@reach/router";
-
 class Articles extends Component {
   state = {
     articles: [],
@@ -62,5 +61,4 @@ class Articles extends Component {
       });
   };
 }
-
 export default Articles;

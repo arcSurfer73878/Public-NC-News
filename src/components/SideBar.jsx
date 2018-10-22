@@ -1,7 +1,6 @@
 import React from "react";
 import "../App.css";
 import { Link } from "@reach/router";
-
 class SideBar extends React.Component {
   state = {
     username: "",
@@ -12,7 +11,14 @@ class SideBar extends React.Component {
       <div>
         <div className="login">
           {this.state.login ? (
-            <h4>You are logged as {this.state.username}</h4>
+            <form onSubmit={this.Logout}>
+              <div className="username">
+                <h4>You are logged as {this.state.username}</h4>
+                <div>
+                  <button>Logout</button>
+                </div>
+              </div>
+            </form>
           ) : (
             <form onSubmit={this.handleSubmit}>
               <div className="username">
@@ -59,6 +65,14 @@ class SideBar extends React.Component {
       login: true
     });
   };
+  Logout = event => {
+    event.preventDefault();
+    this.props.logout();
+    this.setState({
+      username: "",
+      login: false
+    });
+  };
   handleChange = event => {
     const value = event.target.value;
     this.setState({
@@ -66,5 +80,4 @@ class SideBar extends React.Component {
     });
   };
 }
-
 export default SideBar;

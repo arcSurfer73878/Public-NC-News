@@ -2,7 +2,7 @@ import React from "react";
 import Votes from "./Votes";
 import { Link } from "@reach/router";
 
-function List3({ articles, articleFilter }) {
+function PopularList({ articles, articleFilter }) {
   function compare(a, b) {
     const voteA = a.votes;
     const voteB = b.votes;
@@ -47,4 +47,4 @@ function List3({ articles, articleFilter }) {
   );
 }
 
-export default List3;
+export default PopularList;

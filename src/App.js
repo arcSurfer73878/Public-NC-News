@@ -30,7 +30,7 @@ class App extends Component {
           <Nav articleSearch={this.articleSearch} />
         </nav>
         <section>
-          <SideBar login={this.login} />
+          <SideBar login={this.login} logout={this.logout} />
         </section>
         <main>
           <Router>
@@ -74,6 +74,11 @@ class App extends Component {
       this.setState({
         user
       });
+    });
+  };
+  logout = () => {
+    this.setState({
+      user: ""
     });
   };
 }

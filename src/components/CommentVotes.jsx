@@ -44,5 +44,4 @@ class CommentVotes extends Component {
     });
   };
 }
-
 export default CommentVotes;

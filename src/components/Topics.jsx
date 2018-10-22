@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "../App.css";
 import * as api from "../api";
 import Search from "./Search";
-
 class Topics extends Component {
   state = {
     topics: []
@@ -35,5 +34,4 @@ class Topics extends Component {
     );
   };
 }
-
 export default Topics;

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../App.css";
 import * as api from "../api";
-import List2 from "./List2";
+import MostCommentedList from "./MostCommentedList";
 import Search from "./Search";
 class MostComments extends Component {
   state = {
@@ -20,7 +20,7 @@ class MostComments extends Component {
           <h2>Most Commented</h2>
         </div>
         <div className="row">
-          <List2
+          <MostCommentedList
             articles={this.state.articles}
             articleFilter={this.state.articleFilter}
           />
@@ -35,7 +35,6 @@ class MostComments extends Component {
     this.fetchArticles();
   }
   componentDidUpdate(prevProps) {
-    console.log(this.props.topic);
     if (prevProps.topic !== this.props.topic) {
       this.fetchArticles();
     }

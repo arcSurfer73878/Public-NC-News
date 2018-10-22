@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import * as api from "../api";
+
 class Votes extends Component {
   state = {
     voteMod: 0
@@ -36,5 +37,4 @@ class Votes extends Component {
     });
   };
 }
-
 export default Votes;

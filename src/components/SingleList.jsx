@@ -1,7 +1,7 @@
 import React from "react";
 import Votes from "./Votes";
 
-function SingleList({ article, deleteArticle }) {
+function SingleList({ article }) {
   return (
     <div>
       <div key={article._id} className="card">

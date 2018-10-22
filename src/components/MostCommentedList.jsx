@@ -2,10 +2,22 @@ import React from "react";
 import Votes from "./Votes";
 import { Link } from "@reach/router";
 
-function List({ articles, articleFilter }) {
+function MostCommentedList({ articles, articleFilter }) {
+  function compare(a, b) {
+    const commentA = a.comment_count;
+    const commentB = b.comment_count;
+    let comparison = 0;
+    if (commentA > commentB) {
+      comparison = -1;
+    } else if (commentA < commentB) {
+      comparison = 1;
+    }
+    return comparison;
+  }
+  const result = [...articles].sort(compare);
   return (
     <div>
-      {articles.reduce((acc, article) => {
+      {result.reduce((acc, article) => {
         if (
           !articleFilter ||
           article.title.toLowerCase().includes(articleFilter.toLowerCase()) ||
@@ -35,4 +47,4 @@ function List({ articles, articleFilter }) {
   );
 }
 
-export default List;
+export default MostCommentedList;

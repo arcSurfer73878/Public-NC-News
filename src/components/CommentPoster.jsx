@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../App.css";
-
 class CommentPoster extends Component {
   state = {
     body: "",
@@ -9,8 +8,26 @@ class CommentPoster extends Component {
   render() {
     return (
       <div id="comment_form">
-        {this.state.addedComment ? (
-          <h2>Your comment has been added!</h2>
+        {!this.props.user ? (
+          <h2>Please Login to add a comment</h2>
+        ) : this.state.addedComment ? (
+          <div>
+            <h2>Your comment has been added!</h2>
+            <form onSubmit={this.handleSubmit}>
+              <textarea
+                rows="10"
+                id="comment"
+                placeholder="Write a comment..."
+                type="text"
+                aria-label="comment body"
+                onChange={this.handleChange}
+              />
+              <br />
+              <div className="username">
+                <button>Post</button>
+              </div>
+            </form>
+          </div>
         ) : (
           <form onSubmit={this.handleSubmit}>
             <textarea
@@ -44,5 +61,4 @@ class CommentPoster extends Component {
     });
   };
 }
-
 export default CommentPoster;

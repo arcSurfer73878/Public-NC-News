@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import * as api from "../api";
 import CommentPoster from "./CommentPoster";
 import ListComment from "./ListComment";
-
 class Comment extends Component {
   state = {
     comments: []
@@ -10,7 +9,7 @@ class Comment extends Component {
   render() {
     return (
       <div>
-        <CommentPoster addComment={this.addComment} />
+        <CommentPoster addComment={this.addComment} user={this.props.user} />
         <h2>Comments:</h2>
         <ul>
           <div className="row">
@@ -31,7 +30,6 @@ class Comment extends Component {
     );
   };
   addComment = body => {
-    console.log(body);
     api.postComment(this.props.id, body, this.props.user).then(comment => {
       console.log(comment);
       this.setState({
@@ -47,5 +45,4 @@ class Comment extends Component {
     });
   };
 }
-
 export default Comment;

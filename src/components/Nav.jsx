@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "@reach/router";
 import * as api from "../api";
-
 class Nav extends Component {
   state = {
     topics: []
@@ -43,5 +42,4 @@ class Nav extends Component {
     );
   };
 }
-
 export default Nav;

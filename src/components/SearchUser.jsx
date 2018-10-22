@@ -1,5 +1,7 @@
 import React from "react";
 import "../App.css";
+import PropTypes from "prop-types";
+
 class SearchUser extends React.Component {
   state = {
     keyword: ""
@@ -33,5 +35,7 @@ class SearchUser extends React.Component {
     });
   };
 }
-
+SearchUser.propTypes = {
+  keyword: PropTypes.string.isRequired
+};
 export default SearchUser;

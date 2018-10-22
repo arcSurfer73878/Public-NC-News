@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../App.css";
 import * as api from "../api";
-import List from "./List";
+import ArticlesList from "./ArticlesList";
 import Search from "./Search";
 import { navigate } from "@reach/router";
 
@@ -24,7 +24,7 @@ class Articles extends Component {
               <h2>Latest Articles</h2>
             </div>
             <div className="row">
-              <List
+              <ArticlesList
                 articles={this.state.articles}
                 articleFilter={this.state.articleFilter}
               />
@@ -40,7 +40,7 @@ class Articles extends Component {
               <h2>Coding Articles</h2>
             </div>
             <div className="row">
-              <List
+              <ArticlesList
                 articles={this.state.articles}
                 articleFilter={this.state.articleFilter}
               />
@@ -56,7 +56,7 @@ class Articles extends Component {
               <h2>Football Articles</h2>
             </div>
             <div className="row">
-              <List
+              <ArticlesList
                 articles={this.state.articles}
                 articleFilter={this.state.articleFilter}
               />
@@ -72,7 +72,7 @@ class Articles extends Component {
               <h2>Cooking Articles</h2>
             </div>
             <div className="row">
-              <List
+              <ArticlesList
                 articles={this.state.articles}
                 articleFilter={this.state.articleFilter}
               />
@@ -110,5 +110,4 @@ class Articles extends Component {
       });
   };
 }
-
 export default Articles;
