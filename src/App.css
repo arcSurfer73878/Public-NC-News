@@ -12,7 +12,9 @@
 body {
   font-family: Arial;
   padding: 10px;
-  background: #f1f1f1;
+  background: #e2d1c3;
+  background-image: linear-gradient(to bottom, #fdfcfb 0%, #e2d1c3 100%);
+  background-repeat: no-repeat, repeat;
 }
 .home {
   display: flex;
@@ -120,6 +122,9 @@ nav span:hover {
 .bouton:hover {
   background-color: white;
   color: black;
+}
+.bouton:active {
+  background-color: white;
 }
 .bouton3 {
   background-color: #ddd;
@@ -274,7 +279,7 @@ label {
 footer {
   padding: 20px;
   text-align: center;
-  background: #ddd;
+  background: #f2f2f2;
   margin-top: 20px;
   grid-area: footer;
 }

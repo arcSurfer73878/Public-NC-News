@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../App.css";
 import * as api from "../api";
+import { Link } from "@reach/router";
 import SearchUser from "./SearchUser";
 
 class Topics extends Component {
@@ -16,7 +17,7 @@ class Topics extends Component {
         </div>
         <br />
         <div className="title">
-          <h2>Users</h2>
+          <h2>Choose a User to see his/her Articles</h2>
         </div>
         <div className="row">
           {this.state.users.reduce((acc, user) => {
@@ -29,7 +30,13 @@ class Topics extends Component {
             ) {
               acc.push(
                 <div key={user._id} className="titre">
-                  <h2>{user.username}</h2>
+                  <Link
+                    key={user._id}
+                    to={`/users/${user.username}`}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <h2>{user.username}</h2>
+                  </Link>
                 </div>
               );
             }

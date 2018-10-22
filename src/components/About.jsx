@@ -15,10 +15,18 @@ class About extends Component {
             </div>
             <div className="content">
               <p>
-                fbwhjefbwkfjcdwj jknfwln ljnfwjwjn dnjdncjwdndwncjldd c<br />
-                bw bwhb hwdb hwdb hdjkwdkjwk fwwuewpnkjkldwfmkw
+                This is a website made for a Northcoders project.
                 <br />
-                dwiownw dhdh eiowpqwqoeirn vnjnfvmdwm{" "}
+                We are fetching data from an Api made with MongoDb.
+                <br />
+                And then, using React, we built a front end page using <br />
+                class based components or functional components.
+                <br />
+                <br />
+                Have fun navigating those pages!
+                <br />
+                <br />
+                Kaiming
               </p>
             </div>
           </div>

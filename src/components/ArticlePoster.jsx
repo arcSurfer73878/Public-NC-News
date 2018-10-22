@@ -16,7 +16,7 @@ class ArticlePoster extends Component {
       <div className="container2">
         <form onSubmit={this.handleSubmit}>
           <div className="row2">
-            <div class="col-75">
+            <div className="col-75">
               <input
                 name="title"
                 id="title"
@@ -39,7 +39,7 @@ class ArticlePoster extends Component {
                 </select>
               </div>
             </div>
-            <div class="col-75">
+            <div className="col-75">
               <textarea
                 rows="10"
                 name="comment"
