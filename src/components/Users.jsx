@@ -3,6 +3,7 @@ import "../App.css";
 import * as api from "../api";
 import { Link } from "@reach/router";
 import SearchUser from "./SearchUser";
+import PropTypes from "prop-types";
 class Users extends Component {
   state = {
     users: [],
@@ -59,4 +60,7 @@ class Users extends Component {
     );
   };
 }
+Users.propTypes = {
+  users: PropTypes.array
+};
 export default Users;

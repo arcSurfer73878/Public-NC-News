@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css";
 import { Link } from "@reach/router";
+import PropTypes from "prop-types";
 class SideBar extends React.Component {
   state = {
     username: "",
@@ -80,4 +81,7 @@ class SideBar extends React.Component {
     });
   };
 }
+SideBar.propTypes = {
+  username: PropTypes.string
+};
 export default SideBar;

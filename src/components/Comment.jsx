@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import * as api from "../api";
 import CommentPoster from "./CommentPoster";
 import ListComment from "./ListComment";
+import PropTypes from "prop-types";
 class Comment extends Component {
   state = {
     comments: []
@@ -32,7 +33,6 @@ class Comment extends Component {
   };
   addComment = body => {
     api.postComment(this.props.id, body, this.props.user).then(comment => {
-      console.log(comment);
       this.setState({
         comments: [comment, ...this.state.comments]
       });
@@ -46,4 +46,7 @@ class Comment extends Component {
     });
   };
 }
+Comment.propTypes = {
+  comments: PropTypes.array
+};
 export default Comment;

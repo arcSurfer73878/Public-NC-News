@@ -3,7 +3,7 @@ import "../App.css";
 import * as api from "../api";
 import PopularList from "./PopularList";
 import Search from "./Search";
-
+import PropTypes from "prop-types";
 class Popular extends Component {
   state = {
     articles: [],
@@ -48,4 +48,7 @@ class Popular extends Component {
     );
   };
 }
+Popular.propTypes = {
+  articles: PropTypes.array
+};
 export default Popular;

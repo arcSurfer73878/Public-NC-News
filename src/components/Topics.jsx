@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../App.css";
 import * as api from "../api";
 import Search from "./Search";
+import PropTypes from "prop-types";
 class Topics extends Component {
   state = {
     topics: []
@@ -34,4 +35,7 @@ class Topics extends Component {
     );
   };
 }
+Topics.propTypes = {
+  topics: PropTypes.array
+};
 export default Topics;

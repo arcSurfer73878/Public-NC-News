@@ -36,6 +36,6 @@ class SearchUser extends React.Component {
   };
 }
 SearchUser.propTypes = {
-  keyword: PropTypes.string.isRequired
+  keyword: PropTypes.string
 };
 export default SearchUser;

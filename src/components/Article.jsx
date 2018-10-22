@@ -3,6 +3,7 @@ import * as api from "../api";
 import Comment from "./Comment";
 import SingleList from "./SingleList";
 import { navigate } from "@reach/router";
+import PropTypes from "prop-types";
 
 class Article extends Component {
   state = { article: {}, delete: false, err: null };
@@ -38,4 +39,8 @@ class Article extends Component {
       });
   }
 }
+Article.propTypes = {
+  article: PropTypes.object,
+  delete: PropTypes.bool
+};
 export default Article;

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "@reach/router";
 import * as api from "../api";
+import PropTypes from "prop-types";
 class Nav extends Component {
   state = {
     topics: []
@@ -42,4 +43,7 @@ class Nav extends Component {
     );
   };
 }
+Nav.propTypes = {
+  topics: PropTypes.array
+};
 export default Nav;

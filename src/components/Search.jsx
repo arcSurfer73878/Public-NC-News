@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-
+import PropTypes from "prop-types";
 class Search extends React.Component {
   state = {
     keyword: ""
@@ -34,5 +34,7 @@ class Search extends React.Component {
     });
   };
 }
-
+Search.propTypes = {
+  keyword: PropTypes.string
+};
 export default Search;

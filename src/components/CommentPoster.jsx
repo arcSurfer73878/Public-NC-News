@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../App.css";
+import PropTypes from "prop-types";
 class CommentPoster extends Component {
   state = {
     body: "",
@@ -61,4 +62,8 @@ class CommentPoster extends Component {
     });
   };
 }
+CommentPoster.propTypes = {
+  body: PropTypes.string,
+  addedComment: PropTypes.bool
+};
 export default CommentPoster;

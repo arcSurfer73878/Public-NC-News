@@ -4,7 +4,9 @@ import * as api from "../api";
 import ListUser from "./ListUser";
 import Search from "./Search";
 import { navigate } from "@reach/router";
-class Articles extends Component {
+import PropTypes from "prop-types";
+
+class ArticlesUser extends Component {
   state = {
     articles: [],
     articleFilter: null,
@@ -61,4 +63,7 @@ class Articles extends Component {
       });
   };
 }
-export default Articles;
+ArticlesUser.propTypes = {
+  articles: PropTypes.array
+};
+export default ArticlesUser;

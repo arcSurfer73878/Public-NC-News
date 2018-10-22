@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import * as api from "../api";
+import PropTypes from "prop-types";
 class CommentVotes extends Component {
   state = {
     voteMod: 0
@@ -51,4 +52,7 @@ class CommentVotes extends Component {
     });
   };
 }
+CommentVotes.propTypes = {
+  voteMod: PropTypes.number
+};
 export default CommentVotes;

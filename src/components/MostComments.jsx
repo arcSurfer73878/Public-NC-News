@@ -3,6 +3,7 @@ import "../App.css";
 import * as api from "../api";
 import MostCommentedList from "./MostCommentedList";
 import Search from "./Search";
+import PropTypes from "prop-types";
 class MostComments extends Component {
   state = {
     articles: [],
@@ -47,5 +48,7 @@ class MostComments extends Component {
     );
   };
 }
-
+MostComments.propTypes = {
+  articles: PropTypes.array
+};
 export default MostComments;

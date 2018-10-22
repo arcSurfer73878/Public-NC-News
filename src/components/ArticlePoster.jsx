@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../App.css";
 import * as api from "../api";
+import PropTypes from "prop-types";
 class ArticlePoster extends Component {
   state = {
     title: "",
@@ -145,4 +146,10 @@ class ArticlePoster extends Component {
     api.postArticle(title, belongs_to, body, user);
   };
 }
+ArticlePoster.propTypes = {
+  title: PropTypes.string,
+  belongs_to: PropTypes.string,
+  body: PropTypes.string,
+  ArticleAdded: PropTypes.bool
+};
 export default ArticlePoster;
