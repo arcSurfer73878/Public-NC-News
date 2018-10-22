@@ -13,7 +13,7 @@ class ArticlePoster extends Component {
     return !this.props.user ? (
       <ul>
         <div className="title">
-          <h2>Please Login</h2>
+          <h2>Please Login to add an Article</h2>
         </div>
       </ul>
     ) : this.state.ArticleAdded ? (

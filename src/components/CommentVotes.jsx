@@ -22,14 +22,21 @@ class CommentVotes extends Component {
         >
           Down
         </button>
-        <button
-          className="bouton3"
-          onClick={() =>
-            this.props.deleteComment(this.props.comment._id, this.props.comment)
-          }
-        >
-          Delete
-        </button>
+        {this.props.user.username === this.props.comment.created_by.username ? (
+          <button
+            className="bouton3"
+            onClick={() =>
+              this.props.deleteComment(
+                this.props.comment._id,
+                this.props.comment
+              )
+            }
+          >
+            Delete
+          </button>
+        ) : (
+          <div />
+        )}
       </div>
     );
   }

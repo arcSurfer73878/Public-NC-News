@@ -1,7 +1,7 @@
 import React from "react";
 import CommentVotes from "./CommentVotes";
 
-function ListComment({ comments, deleteComment }) {
+function ListComment({ comments, deleteComment, user }) {
   return (
     <div>
       {comments.map(comment => {
@@ -18,7 +18,11 @@ function ListComment({ comments, deleteComment }) {
               <p>{comment.body}</p>
             </div>
             <div>
-              <CommentVotes comment={comment} deleteComment={deleteComment} />
+              <CommentVotes
+                comment={comment}
+                deleteComment={deleteComment}
+                user={user}
+              />
             </div>
           </div>
         );

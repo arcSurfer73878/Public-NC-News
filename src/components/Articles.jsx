@@ -32,50 +32,29 @@ class Articles extends Component {
           </div>
         ) : this.props.topic === "coding" ? (
           <div>
-            <div className="search">
-              <Search articleSearch={this.articleSearch} />
-            </div>
-            <br />
             <div className="title">
               <h2>Coding Articles</h2>
             </div>
             <div className="row">
-              <ArticlesList
-                articles={this.state.articles}
-                articleFilter={this.state.articleFilter}
-              />
+              <ArticlesList articles={this.state.articles} />
             </div>
           </div>
         ) : this.props.topic === "football" ? (
           <div>
-            <div className="search">
-              <Search articleSearch={this.articleSearch} />
-            </div>
-            <br />
             <div className="title">
               <h2>Football Articles</h2>
             </div>
             <div className="row">
-              <ArticlesList
-                articles={this.state.articles}
-                articleFilter={this.state.articleFilter}
-              />
+              <ArticlesList articles={this.state.articles} />
             </div>
           </div>
         ) : this.props.topic === "cooking" ? (
           <div>
-            <div className="search">
-              <Search articleSearch={this.articleSearch} />
-            </div>
-            <br />
             <div className="title">
               <h2>Cooking Articles</h2>
             </div>
             <div className="row">
-              <ArticlesList
-                articles={this.state.articles}
-                articleFilter={this.state.articleFilter}
-              />
+              <ArticlesList articles={this.state.articles} />
             </div>
           </div>
         ) : (

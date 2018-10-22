@@ -16,6 +16,7 @@ class Comment extends Component {
             <ListComment
               comments={this.state.comments}
               deleteComment={this.deleteComment}
+              user={this.props.user}
             />
           </div>
         </ul>
