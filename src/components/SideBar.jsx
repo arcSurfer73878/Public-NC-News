@@ -10,7 +10,7 @@ class SideBar extends React.Component {
     return (
       <div>
         <div className="login">
-          {this.state.login ? (
+          {this.state.login && this.state.username ? (
             <form onSubmit={this.Logout}>
               <div className="username">
                 <h4>You are logged as {this.state.username}</h4>
